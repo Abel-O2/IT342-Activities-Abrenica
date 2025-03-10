@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Contact</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f5f5f5;
+    }
+    h2 {
+      color: #6B8E23;
+    }
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #6B8E23;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #8FBC8F;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      color: #6B8E23;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Create New Contact</h2>
+
+<form action="/contacts" method="post">
+  <label for="givenName">Given Name:</label>
+  <input type="text" id="givenName" name="givenName" required>
+
+  <label for="familyName">Family Name:</label>
+  <input type="text" id="familyName" name="familyName" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email">
+
+  <label for="phoneNumber">Phone Number:</label>
+  <input type="tel" id="phoneNumber" name="phoneNumber">
+
+  <button type="submit">Save Contact</button>
+</form>
+
+<a href="/contacts">Back to Contacts</a>
+
+</body>
+</html>
